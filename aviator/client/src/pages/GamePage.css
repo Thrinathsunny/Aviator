@@ -1,0 +1,76 @@
+.game-container {
+  text-align: center;
+  padding-top: 60px;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to top, #87ceeb, #ffffff);
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.sky {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.plane {
+  position: absolute;
+  top: 40px;
+  left: -100px;
+  width: 100px;
+  animation-name: flyAcross;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flyAcross {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 100vw;
+  }
+}
+
+.boom {
+  font-size: 2rem;
+  color: red;
+  margin-top: 20px;
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(3px, 3px); }
+  50% { transform: translate(-3px, -2px); }
+  75% { transform: translate(2px, -3px); }
+  100% { transform: translate(0); }
+}
+
+.multiplier {
+  font-size: 3rem;
+  margin-top: 40px;
+}
+
+.multiplier.safe {
+  color: green;
+}
+
+.multiplier.crashed {
+  color: red;
+}
+
+.controls {
+  margin-top: 30px;
+}
+
+.controls button {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
